@@ -10,7 +10,7 @@ public class ID1 {
 		int[] values = {};
 		int counter = 1;
 		int sum = 0;
-		while(counter < 10) {
+		while(counter < 1000) {
 			if(counter % 3 == 0 || counter % 5 ==0) {
 				values = pushInArray(values,counter);
 				sum += counter;
