@@ -21,14 +21,22 @@ public class ID2{
 		int counter = 1;
 		while(value < 4000000) {
 			value = fibs.get(counter) + fibs.get(counter-1);
+			
 			fibs.add(value);
 			counter++;
 		}
 		
 		Iterator<Integer> iterator = fibs.iterator();
 
+		int sumOfEvenValue = 0;
 		while(iterator.hasNext()) {
-			System.out.println(iterator.next());
+			int nextValue = iterator.next();
+			if(nextValue % 2 == 0) {
+				System.out.println(nextValue);
+				sumOfEvenValue += nextValue;
+			}
 		}
+
+		System.out.println(" Sum of Even Value : " + sumOfEvenValue);
 	}
 }
